@@ -2,6 +2,14 @@
 
 Public download + auto-updater channel for **Route23** (source is private).
 
+## Install (Homebrew)
+
+```
+brew install --cask --no-quarantine Route23/tap/route23
+```
+
+`--no-quarantine` is required because the app is unsigned (see below).
+
 - `Route23.app.tar.gz` + `.sig` — updater artifacts (minisign-signed)
 - `latest.json` — Tauri updater manifest (endpoint: `releases/latest/download/latest.json`)
 - `*.dmg` — manual download
