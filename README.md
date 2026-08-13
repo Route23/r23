@@ -8,7 +8,7 @@ Public download + auto-updater channel for **Route23** (source is private).
 brew install --cask Route23/tap/route23
 ```
 
-The app is unsigned; if macOS reports it as "damaged", run `xattr -dr com.apple.quarantine /Applications/Route23.app`.
+The cask clears the quarantine flag on install (via `postflight`), so it opens directly even though the app is unsigned.
 
 - `Route23.app.tar.gz` + `.sig` — updater artifacts (minisign-signed)
 - `latest.json` — Tauri updater manifest (endpoint: `releases/latest/download/latest.json`)
